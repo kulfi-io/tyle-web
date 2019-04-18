@@ -38,7 +38,7 @@ module.exports = merge(baseConf, {
     devServer: {
       contentBase: path.join(__dirname, 'dist-dev'),
       compress: true,
-      host: 'kulfi',
+      host: '127.0.0.1',
       port: 3003,
       open: true,
       historyApiFallback: {
