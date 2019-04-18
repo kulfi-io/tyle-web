@@ -18,7 +18,7 @@ export default class BaseService  {
             , "x_access_token": config.token
         }
 
-        this.baseUrl = `${config.apiHostEndpoint}`;
+        this.baseUrl = `${config.hostBaseEndpoint}`;
         this.clientEndPoint = `${this.baseUrl}${config.clientEndpoint}`;
         this.loginEndPoint = `${this.baseUrl}${config.loginEndpoint}`;
         this.userEndPoint = `${this.baseUrl}${config.userEndpoint}`;
