@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------
+  	[Blockquote]
+------------------------------------------------------------------*/
+
+.blockquote {
+    position: relative;
+    font-size: 1.0625rem;
+    font-weight: 400;
+    font-family: Hind, sans-serif;
+    color: #a6a7aa;
+    line-height: 1.4;
+    border-left: none;
+    margin-left: 1.25rem;
+  }
+  
+  .blockquote:before {
+    position: absolute;
+    top: 0;
+    left: -1.25rem;
+    font-size: 3.75rem;
+    display: inline-block;
+    color: #0ba360;;
+    content: '“';
+  }
+  

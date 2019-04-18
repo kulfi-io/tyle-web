@@ -1,0 +1,404 @@
+/*------------------------------------------------------------------
+  	[Footer]
+------------------------------------------------------------------*/
+$default-footer-color: #e6e6e6;
+$default-footer-hover-color: #0ba360;
+$default-footer-input-color: #000;
+.footer {
+	background: url(../img/1920x1080/golden-gate-bridge-night.jpg) no-repeat;
+    background-size: cover;
+	background-position: center center;
+
+	&-seperator {
+		border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2);
+	}
+
+	// &-note-spacing {
+	// 	padding-top: 15%;
+	// 	padding-bottom: 40px;
+	// }
+
+	// &-bottom-spacing {
+	// 	padding-top: 20px;
+	// 	padding-bottom: 10%;
+	// }
+
+	&-note-spacing {
+		padding-top: 5%;
+		padding-bottom: 40px;
+	}
+
+	&-bottom-spacing {
+		padding-top: 20px;
+		padding-bottom: 5%;
+	}
+
+	&-powered {
+		padding: 1%;
+		max-height: 5.3125rem;
+		line-height: 2rem;
+	}
+
+	&-powered-label {
+		font-weight: 500;
+		font-size: small;
+	}
+
+	.footer {
+		&-seperator {
+			border-bottom: 1px solid rgba(255,255,255,.2);
+		}
+
+		&-list {
+			margin-bottom: 0;
+		}
+	
+		&-list-item {
+			color: $default-footer-color;
+			margin-bottom: 25px;
+		}
+		
+		&-list-link {
+			color: $default-footer-color;
+
+			&:hover {
+				color: $default-footer-hover-color;
+			}
+		}
+
+		&-input {
+			@include bg-opacity($default-footer-input-color, .15);
+		}
+
+		&-logo {
+			width:30px;
+			height: auto;
+			max-width: 30px;
+		}
+
+		
+		
+
+	}
+
+}
+
+
+// pixel 2 xl
+@media screen 
+  and (device-width: $pixel-xl-port-width) 
+  and (device-height: $pixel-xl-port-height) 
+  and (orientation: portrait) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 33%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 3%;
+		}
+	}
+
+}
+
+@media screen 
+  and (device-width: $pixel-xl-land-width) 
+  and (device-height: $pixel-xl-land-height) 
+  and (orientation: landscape) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 15%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+
+// pixel 2
+@media screen 
+  and (device-width: $pixel-port-width) 
+  and (device-height: $pixel-port-height) 
+  and (orientation: portrait) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 33%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 3%;
+		}
+	}
+
+}
+
+@media screen 
+  and (device-width: $pixel-land-width) 
+  and (device-height: $pixel-land-height) 
+  and (orientation: landscape) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 20%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+
+// i-phone-x-xs
+@media screen 
+  and (device-width: $iphone-x-port-width) 
+  and (device-height: $iphone-x-port-height) 
+  and (orientation: portrait) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 33%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 3%;
+		}
+	}
+
+}
+
+@media screen 
+  and (device-width: $iphone-x-land-width) 
+  and (device-height: $iphone-x-land-height) 
+  and (orientation: landscape) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 15%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+
+// i-phone-6/7/8-plus
+@media screen 
+  and (device-width: $iphone-plus-port-width) 
+  and (device-height: $iphone-plus-port-height) 
+  and (orientation: portrait) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 33%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+@media screen 
+  and (device-width: $iphone-plus-land-width) 
+  and (device-height: $iphone-plus-land-height) 
+  and (orientation: landscape) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 20%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+// iphone 6/7/8
+@media screen 
+  and (device-width: $iphone-port-width) 
+  and (device-height: $iphone-port-height) 
+  and (orientation: portrait) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 33%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+@media screen 
+  and (device-width: $iphone-land-width) 
+  and (device-height: $iphone-land-height) 
+  and (orientation: landscape) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 20%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+
+// galaxy s9
+@media screen 
+  and (device-width: $galaxy-port-width) 
+  and (device-height: $galaxy-port-height) 
+  and (orientation: portrait) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 33%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+@media screen 
+  and (device-width: $galaxy-land-width) 
+  and (device-height: $galaxy-land-height) 
+  and (orientation: landscape) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 20%;
+			padding-bottom: 5px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 10px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+
+// ipad and ipad mini
+@media screen 
+  and (device-width: $ipad-port-width) 
+  and (device-height: $ipad-port-height) 
+  and (orientation: portrait) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 12%;
+			padding-bottom: 40px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 20px;
+			padding-bottom: 44.30%;
+		}
+	}
+
+}
+
+@media screen 
+  and (device-width: $ipad-land-width) 
+  and (device-height: $ipad-land-height) 
+  and (orientation: landscape) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 12%;
+			padding-bottom: 40px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 20px;
+			padding-bottom: 5.5%;
+		}
+	}
+
+}
+
+
+// i-phone se
+@media screen 
+  and (device-width: $iphone-se-port-width) 
+  and (device-height: $iphone-se-port-height) 
+  and (orientation: portrait) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 35%;
+			padding-bottom: 40px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 20px;
+			padding-bottom: 5%;
+		}
+	}
+
+}
+
+@media screen 
+  and (device-width: $iphone-se-land-width) 
+  and (device-height: $iphone-se-land-height) 
+  and (orientation: landscape) {
+
+	.footer {
+		&-note-spacing {
+			padding-top: 25%;
+			padding-bottom: 40px;
+		}
+	
+		&-bottom-spacing {
+			padding-top: 20px;
+			padding-bottom: 5.5%;
+		}
+	}
+
+}
+

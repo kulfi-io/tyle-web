@@ -1,0 +1,409 @@
+$default-white: #ffffff;
+$default-background-color: #0ba360;
+$defalt-border-color: #4c7a66;
+$default-sub-text: #e6e6e6;
+$default-body-background: #fcfcfc;
+$default-required-color:  #f45858;
+$default-control-label-color: #bfc1c7;
+$default-input-border-color: #dddddd;
+$default-btn-hover-color: #515769;
+$defautl-foot-border: #f3f3f3;
+$default-foot-color: #666;
+$default-invalidated-color: #5e7c6f;
+$default-passed-color: #0ba360;
+$default-extended-tab: #dce2d0;
+
+
+.account {
+    padding: 10px;
+    height: 100%;
+    background-size: cover;
+    background: $default-white;
+    background-repeat:no-repeat;
+
+    .info {
+        position: relative;
+        z-index: 100;
+        bottom: 20px;
+    }
+
+   
+   
+    .info-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        max-height: 300px;
+        opacity: 0;
+       
+    }
+
+    .info-list-hidden {
+        visibility: hidden;
+    }
+
+    @keyframes fadeInOpacity {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .info-list-display {
+        visibility: visible;
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 2s;
+    }
+
+    .info-list li {
+        font-size: small;
+        padding: 0.4rem;
+        color: #666;
+        background-color: #fff;
+        transition: 2s all ease;
+    }
+
+    .popover-title {
+        font-size: 12px;
+    }
+    .popover-content {
+        font-size: 10px;
+    }
+
+    .dropdown-item.active, .dropdown-item:active {
+        background-color: #b6cdb2;
+    }
+
+    .required-field {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1pt;
+        color: $default-required-color
+
+    }
+
+    .control-label {
+        display: block;
+        padding: .625rem .875rem;
+        font-size: 10px;
+        font-weight: 400;
+        color: $default-control-label-color;
+        background-color: rgba(0, 0, 0, 0.015);
+        text-transform: uppercase;
+    }
+
+    .input-group-text {
+        padding-right: .5rem;
+        padding-right: .5rem;
+        border: none;
+        background: none;
+        border-bottom: 1px solid $default-input-border-color;
+    
+    
+        .fa {
+            font-size: 18px;
+        }
+    
+        .fa-base {
+            color: $default-invalidated-color;
+        }
+
+        .right{
+            border-left: 1px solid $default-input-border-color;
+        }
+
+        .left {
+            border-right: 1px solid $default-input-border-color;
+        }
+
+    }
+
+    .search-icon-btn {
+        padding-right: .5rem;
+        border: none;
+        background: none;
+        color:  $default-invalidated-color;
+        border-bottom: 1px solid $default-input-border-color;
+        cursor: pointer;
+        outline-color: $default-btn-hover-color;
+        border-radius: 0;
+        display: block;
+    
+        .fa {
+            font-size: 18px;
+        }
+    
+        .fa-base {
+            color: $default-invalidated-color;
+        }
+    }
+
+    .input-icon-btn {
+        padding-right: .5rem;
+        border: none;
+        background: none;
+        color:  $default-invalidated-color;
+        border-bottom: 1px solid $default-input-border-color;
+        cursor: pointer;
+        outline-color: $default-btn-hover-color;
+        border-radius: 0;
+        display: block;
+    
+        .fa {
+            font-size: 18px;
+        }
+    
+        .fa-base {
+            color: $default-invalidated-color;
+        }
+    }
+
+    .btn-secondary {
+        
+        background-color: $default-invalidated-color;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+
+        :focus, :hover {
+            border-color:  $default-passed-color;
+        }
+
+        &-passed {
+            background-color:  $default-passed-color;
+            color: $default-white;
+        }
+
+        
+    }
+
+
+    &-header {
+        background: $default-background-color;
+        border-bottom: 5px solid $defalt-border-color;
+        text-align: center;
+        padding: 10px;
+        bottom: 40px;
+        box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+
+        .title, a {
+            color: $default-white;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: $default-sub-text;
+        }
+    }
+
+    &-body {
+        background: $default-body-background;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        max-width: 97%;
+        margin: auto;
+    }
+
+    &-footer {
+        bottom: 0;
+        color: $default-foot-color;
+        background: $default-body-background;
+        border-top: 1px solid $defautl-foot-border;
+        max-width: 97%;
+        margin: auto;
+    }
+
+
+    .instructions {
+        min-height: 100px;
+        padding: 1%;
+    }
+    
+    
+    .notification {
+        text-align: center;
+        display: none;
+        font-size: small;
+        font-weight: unset;
+    }
+    
+    .passed {
+        color: $default-passed-color;
+    }
+    
+    .failed {
+        color: #d43838;
+    }
+    
+    small {
+        min-width: 100%;
+    }
+
+}
+
+// i-phone se
+@media screen 
+  and (device-width: $iphone-se-port-width) 
+  and (device-height: $iphone-se-port-height) 
+  and (orientation: portrait) {
+
+    .account {
+        .control-label {
+            display: block;
+            padding: .625rem .75rem;
+            font-size: x-small;
+            font-weight: 400;
+            color: $default-control-label-color;
+            background-color: rgba(0, 0, 0, 0.015);
+            
+            
+        }
+
+        .input-icon-btn {
+            display: none;
+        }
+
+        .btn-secondary {
+            font-size: small;
+            padding: .25rem;
+        }
+        
+        .input-group-text {
+            font-size: small;
+            padding: .25rem;
+        }
+
+        
+
+        .input-group-text {
+            padding-right: .5rem;
+            padding-right: .5rem;
+            border: none;
+            background: none;
+            border-bottom: 1px solid $default-input-border-color;
+        
+        
+            .fa {
+                font-size: 18px;
+            }
+        
+            .fa-base {
+                color: $default-invalidated-color;
+            }
+    
+            .right{
+                border-left: 1px solid $default-input-border-color;
+            }
+    
+            .left {
+                border-right: 1px solid $default-input-border-color;
+            }
+    
+        }
+
+
+        &-header {
+            font-size: small;
+        }
+
+    }
+
+
+    .extend-right {
+        z-index: 20;
+        position: relative;
+        margin-right: 5px;
+        background: $default-extended-tab;
+        border-radius: 0rem;
+
+    }
+
+    .extend-left {
+        z-index: 20;
+        position: relative;
+        margin-left: 5px;
+        background: $default-extended-tab;
+        border-radius: 0rem;
+
+    }
+
+}
+
+
+// i-phone 6/7/8
+@media screen 
+  and (device-width: $iphone-port-width) 
+  and (device-height: $iphone-port-height) 
+  and (orientation: portrait) {
+
+    .account {
+        .input-icon-btn {
+            display: none;
+        }
+
+        .btn-secondary {
+            font-size: small;
+            padding: .25rem;
+        }
+        
+        .input-group-text {
+            font-size: small;
+            padding: .25rem;
+        }
+
+        
+
+        .input-group-text {
+            padding-right: .5rem;
+            padding-right: .5rem;
+            border: none;
+            background: none;
+            border-bottom: 1px solid $default-input-border-color;
+        
+        
+            .fa {
+                font-size: 18px;
+            }
+        
+            .fa-base {
+                color: $default-invalidated-color;
+            }
+    
+         
+        }
+
+
+        &-header {
+            font-size: small;
+        }
+
+    }
+
+
+    .extend-right {
+        z-index: 20;
+        position: relative;
+        margin-right: 5px;
+        background: $default-extended-tab;
+        border-radius: 0rem;
+
+    }
+
+    .extend-left {
+        z-index: 20;
+        position: relative;
+        margin-left: 5px;
+        background: $default-extended-tab;
+        border-radius: 0rem;
+
+    }
+
+}
