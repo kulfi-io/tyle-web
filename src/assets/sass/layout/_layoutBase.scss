@@ -85,7 +85,7 @@
     }
 
     .btn-primary {
-        background-color: #0ba360;
+        background-color: #0B2747;//#0ba360;
     }
 
     .btn-primary:focus, .btn-primary:hover {
@@ -245,20 +245,20 @@
 
         div.active {
             color: #515769;
-            border-color: #0ba360;
+            border-color: #0B2747;//#0ba360;
 
             span {
-                background: #0ba360;    
+                background: #0B2747;//#0ba360;    
             }
 
         }
 
         div.active:before {
-            border-top-color: #0ba360;
+            border-top-color: #0B2747;//#0ba360;
         }
 
         div.active:after {
-            border: 1px solid #0ba360;  
+            border: 1px solid #0B2747;//#0ba360;  
             width: 33.333%;
 
         }
@@ -469,7 +469,7 @@
     left: 0;
     width: 9px;
     height: 2px;
-    background: #0ba360;
+    background: #0B2747;//#0ba360;
     opacity: 0;
     content: " ";
     transition-duration: 400ms;

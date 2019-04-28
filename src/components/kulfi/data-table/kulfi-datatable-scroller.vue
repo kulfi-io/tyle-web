@@ -66,8 +66,9 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-    $default-color: #e2e9e0;//#4c7a66;
-    $hover-scroll-color:#0ba360;
+    $default-color:  #dbedf7;//#e2e9e0;//#4c7a66;
+    $item-text-color: #80a0c4;
+    $hover-scroll-color: #0B2747;//#0ba360;
     // i-phone-se
     $iphone-se-port-height: 568px;
     $iphone-se-port-width: 320px;
@@ -99,7 +100,7 @@ export default Vue.extend({
     .scroll-field {
         font-size: small;
         cursor: pointer;
-        color: #4c7a66;//#ffffff;
+        color: $item-text-color; //#4c7a66;//#ffffff;
     }
 
     // i-phone se

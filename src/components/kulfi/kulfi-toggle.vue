@@ -57,12 +57,12 @@ $input-height: 2.375rem;
 $input-height-sm: 1.9375rem;
 $input-height-lg: 3rem;
 $input-btn-focus-width: 0.2rem;
-$custom-control-indicator-bg: #a3c1a0; // #dee2e6;
+$custom-control-indicator-bg: #80a0c4; //#a3c1a0; // #dee2e6;
 $custom-control-indicator-disabled-bg: #e9ecef;
 $custom-control-description-disabled-color: #868e96;
 $white: white;
 $theme-colors: (
-  "primary": #5e7c6f
+  "primary": #0B2747//#5e7c6f
 );
 
 //

@@ -17,16 +17,13 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-    $default-color: #0ba360;
+    $hover-color: #80a0c4;//#0ba360;
     .table {
         color: #666;
 
         tbody tr:hover {
-            color: #0ba360;;
+            color: $hover-color;
         }
-
-
-
     }
 
 </style>

@@ -14,7 +14,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-    $default-foot-active-color:#5e7c6f;
+    $default-foot-active-color: #80a0c4; //#5e7c6f;
     .foot {
         white-space: nowrap;
         color: $default-foot-active-color;

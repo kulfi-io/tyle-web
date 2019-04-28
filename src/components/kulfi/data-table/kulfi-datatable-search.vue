@@ -51,7 +51,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-    $hover-scroll-color:#0ba360;
+    $hover-scroll-color: #0B2747; //#0ba360;
     .search {
         z-index: 100;
         margin: 0 auto;

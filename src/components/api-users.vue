@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-color-moss-light">
+  <div class="bg-color-heavy-rain">
     <b-container class="content-lg">
       <b-row class="account">
         <b-col cols="12" class="account-header">

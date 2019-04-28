@@ -96,7 +96,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-    $default-active-color: #0ba360; 
+    $default-active-color: #0B2747;//#0ba360; 
     $default-order-active-color:#5e7c6f;
     $default-heading-color: #a3afb7;
     // i-phone-se
