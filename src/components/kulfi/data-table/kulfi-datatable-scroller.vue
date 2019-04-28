@@ -67,8 +67,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
     $default-color:  #dbedf7;//#e2e9e0;//#4c7a66;
-    $item-text-color: #80a0c4;
-    $hover-scroll-color: #0B2747;//#0ba360;
+    $item-text-color: #005276;
+    $hover-scroll-color: #00818f;//#0ba360;
     // i-phone-se
     $iphone-se-port-height: 568px;
     $iphone-se-port-width: 320px;
