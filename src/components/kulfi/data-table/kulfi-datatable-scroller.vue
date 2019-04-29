@@ -93,7 +93,7 @@ export default Vue.extend({
         padding-left: .025rem;
         padding-right: .025rem;
         z-index: 100;
-        margin: 0 auto;
+        // margin: 0 auto;
         background: $default-color;
     }
 
@@ -103,29 +103,6 @@ export default Vue.extend({
         color: $item-text-color; //#4c7a66;//#ffffff;
     }
 
-    // i-phone se
-    @media screen
-    and (device-width: $iphone-se-port-width)
-    and (device-height: $iphone-se-port-height)
-    and (orientation: portrait) {
-        
-        .scroll-field {
-            font-size: xx-small;
-        }
-
-    }
-
-     // i-phone se
-    @media screen
-    and (device-width: $iphone-se-land-width)
-    and (device-height: $iphone-se-land-height)
-    and (orientation: landscape) {
-
-        .scroll-field {
-            font-size: x-small;
-        }
-
-    }
 
 </style>
 

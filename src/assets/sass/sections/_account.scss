@@ -186,12 +186,12 @@ $default-extended-tab: #dce2d0;
 
     &-header {
         background: $default-background-color;
-        border-bottom: 5px solid $defalt-border-color;
+        border-bottom: 10px solid transparent;
         text-align: center;
         padding: 10px;
         bottom: 40px;
-        box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
-        border-image: url('../img/background-leaf.jpg') 30 round;
+        box-shadow: 0 2px 7px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+        border-image: url('../img/background-leaf.jpg') 3 round;
         .title, a {
             color: $default-white;
             text-transform: uppercase;
@@ -208,7 +208,7 @@ $default-extended-tab: #dce2d0;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
         padding: 1.25rem;
-        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
         max-width: 97%;
         margin: auto;
     }
