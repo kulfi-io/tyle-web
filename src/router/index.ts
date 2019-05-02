@@ -9,7 +9,7 @@ import schedule from '../components/api-schedule.vue';
 Vue.use(Router);
 
 let routes = [
-    { path: '/login', name: 'login', title: 'login', component: login},
+    { path: '/login/:id?', name: 'login', title: 'login', component: login},
     { path: '/register', name: 'register', title: 'register', component: register},
     { path: '/users', name: 'users', title: 'users', component: users},
     { path: '/schedule', name: 'schedule', title: 'schedule', component: schedule},

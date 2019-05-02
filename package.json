@@ -8,9 +8,6 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "build": "node build/build.js",
     "start": "npm run dev",
-    "build-dev-server": "webpack-dev-server --inline --progress --config build/dev.config.js",
-    "build-dev": "webpack --progress --config build/dev.config.js",
-    "build-prod": "webpack --progress --config build/prod.config.js",
     "hard-stop": "kill all tyler-cmt-api-2-client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
