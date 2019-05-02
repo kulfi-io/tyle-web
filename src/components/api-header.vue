@@ -5,8 +5,8 @@
         <b-col cols="12">
           <b-navbar-brand class="logo">
             <a class="logo-wrap" href="/">
-              <img class="logo-img logo-img-main" src="assets/img/favicon.png" alt="logo_icon">
-              <img class="logo-img logo-img-active" src="assets/img/favicon.png" alt="logo_icon">
+              <img class="logo-img logo-img-main" src="../assets/img/favicon.png" alt="logo_icon">
+              <img class="logo-img logo-img-active" src="../assets/img/favicon.png" alt="logo_icon">
             </a>
           </b-navbar-brand>
           <div class="menu-container">

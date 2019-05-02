@@ -97,7 +97,7 @@
       <b-row>
         <b-col cols="6">
           <a class="" href="/">
-            <img class="footer-logo" src="assets/img/favicon.png" alt="logo_icon">
+            <img class="footer-logo" src="../assets/img/favicon.png" alt="logo_icon">
           </a>
         </b-col>
         <b-col cols="6" class="text-right">

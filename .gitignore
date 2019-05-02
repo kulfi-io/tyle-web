@@ -44,7 +44,7 @@ src/config
 package-lock.json
 build/base.config.js
 build/dev.config.js
-build/prod.config.js
+
 
 # TypeScript v1 declaration files
 typings/

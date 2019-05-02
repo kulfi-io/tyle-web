@@ -6,7 +6,7 @@ $default-footer-hover-color: #0B2747;//#0ba360;
 $default-footer-input-color: #000;
 .footer {
 	background: url(../img/1920x1080/golden-gate-bridge-night.jpg) no-repeat;
-    background-size: cover;
+  background-size: cover;
 	background-position: center center;
 
 	&-seperator {
@@ -74,6 +74,7 @@ $default-footer-input-color: #000;
 			width:30px;
 			height: auto;
 			max-width: 30px;
+
 		}
 
 		
