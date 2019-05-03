@@ -13,6 +13,9 @@
         <b-col cols="12" class="account-body">
           <b-form id="account-form" @submit="login">
             <b-row class="form-group">
+              <kulfi-token/>
+            </b-row>
+            <b-row class="form-group">
               <kulfi-username :passed="passed" :muted="muted" :readyToSubmit="readyToSubmit"/>
 
               <kulfi-password
@@ -52,6 +55,7 @@
 <script lang="ts">
 import Vue from "vue";
 import Service from "../micro-services/loginService";
+import KulfiToken from "../components/kulfi/kulfi-token.vue"
 import KulfiUsername from "../components/kulfi/kulfi-username.vue";
 import KulfiPassword from "../components/kulfi/kulfi-password.vue";
 import KulfiInfo from "../components/kulfi/kulfi-info.vue";
@@ -62,6 +66,7 @@ let _info: string[] = [];
 export default Vue.extend({
   name: "api-login",
   components: {
+    KulfiToken,
     KulfiUsername,
     KulfiPassword,
     KulfiInfo
@@ -171,29 +176,78 @@ export default Vue.extend({
         }
       }
     },
+    validateToken: function(token: HTMLInputElement): boolean {
+
+      if(token) {
+        if (/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+         .test(token.value))
+        {
+          return true;
+        }
+      }
+
+      return false;
+      
+    },
+    validateUserPass: function(pwd: HTMLInputElement, user: HTMLInputElement): boolean {
+
+      if( /[a-zA-Z0-9-_]{5,15}\w+/.test(user.value) &&
+          /[a-zA-Z0-9!@#$%]{8,15}/.test(pwd.value))
+      {
+        return true;
+      } 
+    
+      return false;
+      
+    },
     readyToSubmit: function() {
       var _submit = <HTMLButtonElement>this.$el.querySelector("#submit");
       var _pwd = <HTMLInputElement>this.$el.querySelector("#password");
       var _username = <HTMLInputElement>this.$el.querySelector("#username");
+      var _token = <HTMLInputElement>this.$el.querySelector("#token");
 
-      if (
-        /[a-zA-Z0-9-_]{5,15}\w+/.test(_username.value) &&
-        /[a-zA-Z0-9!@#$%]{8,15}/.test(_pwd.value)
-      ) {
+      if(this.$route.params) {
+        if (
+          this.validateUserPass(_pwd, _username) &&
+          this.validateToken(_token)
 
-        this.model.username = _username.value;
-        this.model.password = _pwd.value;
+        ) {
 
-        this.submitPassed(_submit);
-        this.validated = true;
+          this.model.username = _username.value;
+          this.model.password = _pwd.value;
+          this.model.token = _token.value;
+
+          this.submitPassed(_submit);
+          this.validated = true;
+
+        } else {
+
+          this.model = new Login();
+
+          this.submitMuted(_submit);
+          this.validated = false;
+        }
 
       } else {
 
-        this.model = new Login();
+        if(this.validateUserPass(_pwd, _username))
+        {
 
-        this.submitMuted(_submit);
-        this.validated = false;
+          this.model.username = _username.value;
+          this.model.password = _pwd.value;
+
+          this.submitPassed(_submit);
+          this.validated = true;
+
+        } else {
+
+          this.model = new Login();
+
+          this.submitMuted(_submit);
+          this.validated = false;
+        }
       }
+      
     }
   }
 });
