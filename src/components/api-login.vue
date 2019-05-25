@@ -209,7 +209,7 @@ export default Vue.extend({
       if(this.$route.params) {
         if (
           this.validateUserPass(_pwd, _username) &&
-          this.validateToken(_token)
+          _token
 
         ) {
 

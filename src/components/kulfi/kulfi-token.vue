@@ -8,7 +8,7 @@
         type="text"
         id="token"
         ref="token"
-        disabled="true"
+        disabled
         />
             
     </b-col>

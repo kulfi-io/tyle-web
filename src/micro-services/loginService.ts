@@ -11,12 +11,17 @@ export class ClientService extends baseService {
         
         if(data.password && data.username) {
 
-           data.password = this.encryptData(data.password);
-           data.username = this.encryptData(data.username);
+            data.password = this.encryptData(data.password);
+            data.username = this.encryptData(data.username);
+            if(data.token) {
+                data.token = this.encryptData(data.token);
+            }
         } 
 
         return Axios.post(this.loginEndPoint, data, this.requestConfig);
     }
+
+   
 }
 
 export default new ClientService();

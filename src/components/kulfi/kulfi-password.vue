@@ -18,8 +18,7 @@
             v-b-popover.hover="'See password criteria below'"
             :placeholder="placeholder"
             required
-            pattern="[a-zA-Z0-9!@#$%]{8
-                ,15}"
+            pattern="[a-zA-Z0-9!@#$%]{8,15}"
         />
         <b-input-group-addon>
             <span class="input-group-text left">

@@ -139,9 +139,14 @@ export default Vue.extend({
 
         Service.create(this.model)
           .then(resp => {
+            var _first = <HTMLInputElement>this.$el.querySelector("#firstName");
+            var _email = <HTMLInputElement>this.$el.querySelector("#email");
+
             this.info = [];
             this.info.push(
-              `Thank you for creating an account ${resp.data.firstName}!`
+              `Thank you for creating an account ${_first.value}! 
+              An account verification email has been sent to ${_email.value}.
+               Please follow this instructions in the email to verify your registration.`
             );
           })
           .catch(err => {
@@ -235,9 +240,7 @@ export default Vue.extend({
     readyToSubmit: function() {
       var _submit = <HTMLButtonElement>this.$el.querySelector("#submit");
       var _pwd = <HTMLInputElement>this.$el.querySelector("#password");
-      var _verify = <HTMLInputElement>(
-        this.$el.querySelector("#verify-password")
-      );
+      var _verify = <HTMLInputElement>this.$el.querySelector("#verify-password");
       var _username = <HTMLInputElement>this.$el.querySelector("#username");
       var _email = <HTMLInputElement>this.$el.querySelector("#email");
       var _first = <HTMLInputElement>this.$el.querySelector("#firstName");
