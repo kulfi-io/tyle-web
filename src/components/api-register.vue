@@ -146,7 +146,7 @@ export default Vue.extend({
             this.info.push(
               `Thank you for creating an account ${_first.value}! 
               An account verification email has been sent to ${_email.value}.
-               Please follow this instructions in the email to verify your registration.`
+               Please follow the instructions in the email to verify your registration.`
             );
           })
           .catch(err => {
