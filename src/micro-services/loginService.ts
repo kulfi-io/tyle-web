@@ -18,7 +18,7 @@ export class ClientService extends baseService {
             }
         } 
 
-        return Axios.post(this.loginEndPoint, data, this.requestConfig);
+        return Axios.post(this.loginEndpoint, data, this.requestConfig);
     }
 
    

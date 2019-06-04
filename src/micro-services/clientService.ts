@@ -7,7 +7,7 @@ export class ClientService extends baseService {
     }
 
     getAll():  AxiosPromise {
-        return Axios.get(this.clientEndPoint, this.requestConfig);
+        return Axios.get(this.clientEndpoint, this.requestConfig);
     }
 }
 
