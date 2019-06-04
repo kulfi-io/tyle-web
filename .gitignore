@@ -41,7 +41,6 @@ yarn-error.log*ß
 node_modules/
 jspm_packages/
 src/config
-package-lock.json
 
 
 # TypeScript v1 declaration files
