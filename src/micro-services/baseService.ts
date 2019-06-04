@@ -4,11 +4,13 @@ import * as crypto from 'crypto-js';
 export default class BaseService  {
 
     protected headers: { "Accept": string; "Content-Type": string; "enctype": string; "x_access_token": string; };
-    protected baseUrl: string;
-    protected requestConfig: { headers: { "Accept": string; "Content-Type": string; "enctype": string; "x_access_token": string; }; responseType: string; };
-    protected clientEndPoint: string;
-    protected loginEndPoint: string;
-    protected userEndPoint: string;
+    protected accountBaseUrl: string;
+    protected mailerBaseUrl: string;
+    protected requestConfig: { headers: { "Accept": string; "Content-Type": string; "enctype": string; "x_access_token": string; }};
+    protected clientEndpoint: string;
+    protected loginEndpoint: string;
+    protected userEndpoint: string;
+    protected registerEmailEndpoint: string;
 
     constructor() {
         this.headers = {
@@ -17,15 +19,18 @@ export default class BaseService  {
             , "enctype": "application/x-www-form-urlencoded"
             , "x_access_token": config.token
         }
+        //  account api
+        this.accountBaseUrl = `${config.accountBaseEndpoint}`;
+        this.clientEndpoint = `${this.accountBaseUrl}${config.clientEndpoint}`;
+        this.loginEndpoint = `${this.accountBaseUrl}${config.loginEndpoint}`;
+        this.userEndpoint = `${this.accountBaseUrl}${config.userEndpoint}`;
 
-        this.baseUrl = `${config.hostBaseEndpoint}`;
-        this.clientEndPoint = `${this.baseUrl}${config.clientEndpoint}`;
-        this.loginEndPoint = `${this.baseUrl}${config.loginEndpoint}`;
-        this.userEndPoint = `${this.baseUrl}${config.userEndpoint}`;
+        // mailer api
+        this.mailerBaseUrl = `${config.mailerBaseEndpoint}`;
+        this.registerEmailEndpoint = `${this.mailerBaseUrl}${config.registerEmailEndpoint}`;
 
         this.requestConfig = {
-            headers: this.headers,
-            responseType: "application/json; charset=utf-8"
+            headers: this.headers
         }
     }
 
