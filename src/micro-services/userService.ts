@@ -21,7 +21,7 @@ export class UserService extends baseService {
 
         } 
 
-        return Axios.post(this.userEndPoint, data,  this.requestConfig);
+        return Axios.post(this.userEndpoint, data,  this.requestConfig);
     }
 
     mapDataItem(items: {}[]): String[]{
@@ -49,7 +49,7 @@ export class UserService extends baseService {
     }
 
     getAll(): AxiosPromise {
-        return Axios.get(this.userEndPoint, this.requestConfig);
+        return Axios.get(this.userEndpoint, this.requestConfig);
     }
 
 }
