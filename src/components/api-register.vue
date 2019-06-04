@@ -76,7 +76,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Service from "../micro-services/userService";
+import userService from "../micro-services/userService";
+import mailService from "../micro-services/mailService";
 import User from "../models/user";
 import Option from "../models/options";
 import Toggle from "../models/toggle";
@@ -137,17 +138,27 @@ export default Vue.extend({
       e.preventDefault();
       if (this.validated) {
 
-        Service.create(this.model)
+        userService.create(this.model)
           .then(resp => {
             var _first = <HTMLInputElement>this.$el.querySelector("#firstName");
             var _email = <HTMLInputElement>this.$el.querySelector("#email");
 
             this.info = [];
             this.info.push(
-              `Thank you for creating an account ${_first.value}! 
-              An account verification email has been sent to ${_email.value}.
-               Please follow the instructions in the email to verify your registration.`
+              `Thank you for creating an account ${_first.value}!` 
             );
+
+            mailService.register(JSON.stringify(resp.data.message))
+            .then(resp => {
+              this.info.push(
+                `An account verification email has been sent to ${_email.value}. 
+                Please follow the instructions in the email to verify your registration.`
+              );
+            })
+            .catch(mErr => {
+              this.info.push(mErr.response.data.message);
+            });
+            
           })
           .catch(err => {
             this.info = [];

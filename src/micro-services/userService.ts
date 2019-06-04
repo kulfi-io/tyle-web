@@ -20,7 +20,6 @@ export class UserService extends baseService {
             data.username = this.encryptData(data.username);
 
         } 
-
         return Axios.post(this.userEndpoint, data,  this.requestConfig);
     }
 
