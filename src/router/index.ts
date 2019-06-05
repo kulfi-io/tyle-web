@@ -13,7 +13,6 @@ let routes = [
     { path: '/register', name: 'register', title: 'register', component: register},
     { path: '/users', name: 'users', title: 'users', component: users},
     { path: '/schedule', name: 'schedule', title: 'schedule', component: schedule},
-    // { path: '*', redirect: {name: 'login'}}
 ]
 
 export default new Router({
