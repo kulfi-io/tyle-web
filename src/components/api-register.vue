@@ -156,7 +156,12 @@ export default Vue.extend({
               );
             })
             .catch(mErr => {
-              this.info.push(mErr.response.data.message);
+              this.info = [];
+              this.info.push(`Unable to send email to ${_email.value}. Please use another. Re-enter all values`);
+              userService.delete(resp.data.message.userId);
+              this.clearForm();
+              this.readyToSubmit();
+
             });
             
           })
@@ -247,6 +252,40 @@ export default Vue.extend({
       _first.value='';
       _last.value='';
 
+      this.resetIcons();
+    },
+    resetIcons: function() {
+      var _elements:HTMLElement[] = [];
+      var _userFa = <HTMLElement>document.getElementById("fa-user");
+      var _emailFa = <HTMLElement>document.getElementById("fa-email");
+      var _firstFa = <HTMLElement>document.querySelector(`#fa-firstName`);
+      var _lastFa = <HTMLElement>document.querySelector(`#fa-lastName`);
+      var _emailFa = <HTMLElement>document.getElementById("fa-email");
+      var _verFa = <HTMLElement>document.getElementById("fa-ver");
+      var _pwdFa = <HTMLElement>document.querySelector(`#fa-pwd`);
+      var _length = <HTMLElement>document.getElementById("pwd-length");
+      var _upper = <HTMLElement>document.getElementById("pwd-upper");
+      var _lower = <HTMLElement>document.getElementById("pwd-lower");
+      var _number = <HTMLElement>document.getElementById("pwd-number");
+      var _special = <HTMLElement>document.getElementById("pwd-special");
+      var _match = <HTMLElement>document.getElementById("pwd-match");
+
+      _elements.push(_userFa);
+      _elements.push(_emailFa);
+      _elements.push(_firstFa);
+      _elements.push(_lastFa)
+      _elements.push(_verFa);
+      _elements.push(_pwdFa);
+      _elements.push(_length);
+      _elements.push(_upper);
+      _elements.push(_lower);
+      _elements.push(_number);
+      _elements.push(_special);
+      _elements.push(_match);
+
+      _elements.forEach((item)  => {
+        this.muted(item);
+      });
     },
     readyToSubmit: function() {
       var _submit = <HTMLButtonElement>this.$el.querySelector("#submit");
