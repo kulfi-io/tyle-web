@@ -47,6 +47,11 @@ export class UserService extends baseService {
         return _data;
     }
 
+    delete(id: string): AxiosPromise {
+        const _endpoint = `${this.userEndpoint}/${id}`;
+        return Axios.delete(_endpoint, this.requestConfig);
+    }
+
     getAll(): AxiosPromise {
         return Axios.get(this.userEndpoint, this.requestConfig);
     }
