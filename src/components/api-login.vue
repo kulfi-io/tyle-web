@@ -103,19 +103,34 @@ export default Vue.extend({
       event.preventDefault();
       if(this.validated) {
 
-        Service.login(this.model)
-        .then((resp) => {
-          this.info =[];
-          this.info.push(resp.data.message);
-        })
-        .catch((err) => {
-          this.info =[];
-          this.info.push(err.response.data.message);
-        });
-
+        if(this.model.token) {
+          this.verify();
+        } else {
+          Service.login(this.model)
+          .then((resp) => {
+            this.info =[];
+            this.info.push(resp.data.message);
+          })
+          .catch((err) => {
+            this.info =[];
+            this.info.push(err.response.data.message);
+          });
+        }
+        
         this.displayNotification();
       }
 
+    },
+    verify: function() {
+      Service.verify(this.model)
+      .then((resp) => {
+        this.info =[];
+        this.info.push(resp.data.message);
+      })
+      .catch((err) => {
+        this.info =[];
+        this.info.push(err.response.data.message);
+      });
     },
     passed: function(elm: HTMLElement | null): void {
       if (elm) {

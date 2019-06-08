@@ -11,6 +11,7 @@ export default class BaseService  {
     protected loginEndpoint: string;
     protected userEndpoint: string;
     protected registerEmailEndpoint: string;
+    protected verifyEndpoint: string;
 
     constructor() {
         this.headers = {
@@ -24,7 +25,7 @@ export default class BaseService  {
         this.clientEndpoint = `${this.accountBaseUrl}${config.clientEndpoint}`;
         this.loginEndpoint = `${this.accountBaseUrl}${config.loginEndpoint}`;
         this.userEndpoint = `${this.accountBaseUrl}${config.userEndpoint}`;
-
+        this.verifyEndpoint = `${this.accountBaseUrl}${config.verifyEndpoint}`;
         // mailer api
         this.mailerBaseUrl = `${config.mailerBaseEndpoint}`;
         this.registerEmailEndpoint = `${this.mailerBaseUrl}${config.registerEmailEndpoint}`;
